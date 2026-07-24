@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Starting build..."
+
+  build:
+    commands:
+      - echo "Building static website..."
+      - ls -la
+
+  post_build:
+    commands:
+      - echo "Build completed successfully."
+
+artifacts:
+  files:
+    - '**/*'
