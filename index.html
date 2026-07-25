@@ -1,412 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Test</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#2563eb;
+            font-family:Arial,sans-serif;
+            color:white;
+        }
 
-<style>
+        .box{
+            background:white;
+            color:#2563eb;
+            padding:40px 60px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,.2);
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+        h1{
+            margin-bottom:10px;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f4f7fb;
-    color:#222;
-}
-
-/* Navigation */
-
-header{
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(15px);
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
-    z-index:1000;
-}
-
-nav{
-    width:90%;
-    height:75px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:700;
-    color:#2563eb;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:35px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#444;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#2563eb;
-}
-
-/* Hero */
-
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
-    color:white;
-    padding:20px;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero h1{
-    font-size:65px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    line-height:1.8;
-    margin-bottom:40px;
-}
-
-.btn{
-    display:inline-block;
-    padding:18px 45px;
-    background:white;
-    color:#2563eb;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#111827;
-    color:white;
-    transform:translateY(-5px);
-}
-
-/* Features */
-
-.features{
-    width:90%;
-    margin:100px auto;
-}
-
-.title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#666;
-    margin-bottom:50px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(37,99,235,.2);
-}
-
-.icon{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#555;
-    line-height:1.8;
-}
-
-/* Statistics */
-
-.stats{
-    background:#2563eb;
-    color:white;
-    padding:80px 10%;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:40px;
-    text-align:center;
-}
-
-.stats h2{
-    font-size:50px;
-}
-
-.stats p{
-    margin-top:10px;
-}
-
-/* About */
-
-.about{
-    width:90%;
-    margin:100px auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.about img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
-}
-
-.about h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.about p{
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
-}
-
-/* CTA */
-
-.cta{
-    background:linear-gradient(135deg,#111827,#1e3a8a);
-    color:white;
-    text-align:center;
-    padding:90px 20px;
-}
-
-.cta h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.cta p{
-    font-size:20px;
-    margin-bottom:35px;
-}
-
-/* Footer */
-
-footer{
-    background:#0f172a;
-    color:#cbd5e1;
-    text-align:center;
-    padding:25px;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.about{
-    grid-template-columns:1fr;
-}
-
-nav ul{
-    display:none;
-}
-
-}
-
-</style>
+        p{
+            margin:0;
+            font-size:18px;
+        }
+    </style>
 
 </head>
-
 <body>
 
-<header>
-<nav>
-
-<div class="logo">MyWebsite</div>
-
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Welcome to My Website</h1>
-
-<p>
-Build beautiful, responsive and modern web applications with ease.
-Deploy your applications to AWS and scale them with confidence.
-</p>
-
-<a href="#" class="btn">Get Started</a>
-
+<div class="box">
+    <h1>🎉 CI/CD is Working!</h1>
+    <p>Deployment Successful</p>
+    <p><strong>Version 1.0</strong></p>
 </div>
-
-</section>
-
-<section class="features" id="features">
-
-<h2 class="title">Our Features</h2>
-
-<p class="subtitle">
-Everything you need for a modern website.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">🚀</div>
-<h3>Fast Performance</h3>
-<p>Optimized for speed and excellent user experience.</p>
-</div>
-
-<div class="card">
-<div class="icon">🔒</div>
-<h3>Secure</h3>
-<p>Built with modern security standards and best practices.</p>
-</div>
-
-<div class="card">
-<div class="icon">☁️</div>
-<h3>Cloud Ready</h3>
-<p>Deploy effortlessly to AWS and other cloud platforms.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stats-grid">
-
-<div>
-<h2>10K+</h2>
-<p>Users</p>
-</div>
-
-<div>
-<h2>500+</h2>
-<p>Projects</p>
-</div>
-
-<div>
-<h2>99.9%</h2>
-<p>Uptime</p>
-</div>
-
-<div>
-<h2>24/7</h2>
-<p>Support</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="about" id="about">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000" alt="About">
-
-<div>
-
-<h2>Why Choose Us?</h2>
-
-<p>
-We design modern, scalable and responsive websites that look professional on every device.
-</p>
-
-<p>
-Whether you're building a portfolio, company website or cloud application, this template gives you a clean starting point.
-</p>
-
-<a href="#" class="btn">Learn More</a>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Ready to Build Something Great?</h2>
-
-<p>Start your journey today with a modern and responsive website.</p>
-
-<a href="#" class="btn">Start Now</a>
-
-</section>
-
-<footer id="contact">
-
-© 2026 MyWebsite. All Rights Reserved.
-
-</footer>
 
 </body>
 </html>
