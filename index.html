@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome | My Website</title>
+<title>My Website</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,7 +21,7 @@ html{
 }
 
 body{
-    background:#f5f7fb;
+    background:#f4f7fb;
     color:#222;
 }
 
@@ -32,19 +32,19 @@ header{
     position:fixed;
     top:0;
     left:0;
-    background:rgba(255,255,255,.9);
-    backdrop-filter:blur(12px);
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
     z-index:1000;
 }
 
 nav{
     width:90%;
+    height:75px;
     margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    height:75px;
 }
 
 .logo{
@@ -64,7 +64,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration:none;
-    color:#333;
+    color:#444;
     font-weight:500;
     transition:.3s;
 }
@@ -77,12 +77,12 @@ nav ul li a:hover{
 
 .hero{
     height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     background:linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
     color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
     padding:20px;
 }
 
@@ -103,34 +103,35 @@ nav ul li a:hover{
 
 .btn{
     display:inline-block;
-    padding:18px 40px;
+    padding:18px 45px;
     background:white;
     color:#2563eb;
-    border-radius:40px;
+    border-radius:50px;
     text-decoration:none;
     font-weight:600;
     transition:.3s;
 }
 
 .btn:hover{
+    background:#111827;
+    color:white;
     transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
 /* Features */
 
 .features{
     width:90%;
-    margin:90px auto;
+    margin:100px auto;
 }
 
-.section-title{
+.title{
     text-align:center;
     font-size:42px;
     margin-bottom:15px;
 }
 
-.section-sub{
+.subtitle{
     text-align:center;
     color:#666;
     margin-bottom:50px;
@@ -144,8 +145,8 @@ nav ul li a:hover{
 
 .card{
     background:white;
-    border-radius:20px;
     padding:35px;
+    border-radius:20px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.3s;
@@ -153,6 +154,7 @@ nav ul li a:hover{
 
 .card:hover{
     transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.2);
 }
 
 .icon{
@@ -165,7 +167,7 @@ nav ul li a:hover{
 }
 
 .card p{
-    color:#666;
+    color:#555;
     line-height:1.8;
 }
 
@@ -179,18 +181,17 @@ nav ul li a:hover{
 
 .stats-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:40px;
     text-align:center;
 }
 
-.stat h2{
+.stats h2{
     font-size:50px;
 }
 
-.stat p{
+.stats p{
     margin-top:10px;
-    font-size:18px;
 }
 
 /* About */
@@ -207,7 +208,7 @@ nav ul li a:hover{
 .about img{
     width:100%;
     border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .about h2{
@@ -216,22 +217,22 @@ nav ul li a:hover{
 }
 
 .about p{
+    line-height:1.8;
     color:#555;
-    line-height:1.9;
     margin-bottom:20px;
 }
 
 /* CTA */
 
 .cta{
-    background:linear-gradient(135deg,#0f172a,#1e40af);
+    background:linear-gradient(135deg,#111827,#1e3a8a);
     color:white;
-    padding:90px 20px;
     text-align:center;
+    padding:90px 20px;
 }
 
 .cta h2{
-    font-size:45px;
+    font-size:42px;
     margin-bottom:20px;
 }
 
@@ -278,7 +279,6 @@ nav ul{
 <body>
 
 <header>
-
 <nav>
 
 <div class="logo">MyWebsite</div>
@@ -291,18 +291,17 @@ nav ul{
 </ul>
 
 </nav>
-
 </header>
 
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>Build Amazing Websites With Confidence</h1>
+<h1>Welcome to My Website</h1>
 
 <p>
-Create modern, responsive, and high-performance web applications using the latest technologies.
-Deploy seamlessly to AWS and deliver an exceptional user experience.
+Build beautiful, responsive and modern web applications with ease.
+Deploy your applications to AWS and scale them with confidence.
 </p>
 
 <a href="#" class="btn">Get Started</a>
@@ -313,10 +312,10 @@ Deploy seamlessly to AWS and deliver an exceptional user experience.
 
 <section class="features" id="features">
 
-<h2 class="section-title">Our Features</h2>
+<h2 class="title">Our Features</h2>
 
-<p class="section-sub">
-Everything you need to build professional applications.
+<p class="subtitle">
+Everything you need for a modern website.
 </p>
 
 <div class="grid">
@@ -324,37 +323,19 @@ Everything you need to build professional applications.
 <div class="card">
 <div class="icon">🚀</div>
 <h3>Fast Performance</h3>
-<p>Lightning-fast loading speed and optimized performance for all devices.</p>
+<p>Optimized for speed and excellent user experience.</p>
 </div>
 
 <div class="card">
 <div class="icon">🔒</div>
 <h3>Secure</h3>
-<p>Industry-standard security practices to keep your application safe.</p>
+<p>Built with modern security standards and best practices.</p>
 </div>
 
 <div class="card">
 <div class="icon">☁️</div>
 <h3>Cloud Ready</h3>
-<p>Deploy easily on AWS, Azure, or Google Cloud with CI/CD support.</p>
-</div>
-
-<div class="card">
-<div class="icon">📱</div>
-<h3>Responsive</h3>
-<p>Beautiful layouts that adapt perfectly to desktops, tablets, and phones.</p>
-</div>
-
-<div class="card">
-<div class="icon">⚡</div>
-<h3>Modern UI</h3>
-<p>Elegant user interface with smooth animations and professional design.</p>
-</div>
-
-<div class="card">
-<div class="icon">💡</div>
-<h3>Easy to Customize</h3>
-<p>Modify colors, layouts, and sections to fit your own brand.</p>
+<p>Deploy effortlessly to AWS and other cloud platforms.</p>
 </div>
 
 </div>
@@ -365,22 +346,22 @@ Everything you need to build professional applications.
 
 <div class="stats-grid">
 
-<div class="stat">
+<div>
 <h2>10K+</h2>
 <p>Users</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>500+</h2>
 <p>Projects</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>99.9%</h2>
 <p>Uptime</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>24/7</h2>
 <p>Support</p>
 </div>
@@ -391,18 +372,18 @@ Everything you need to build professional applications.
 
 <section class="about" id="about">
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="About">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000" alt="About">
 
 <div>
 
 <h2>Why Choose Us?</h2>
 
 <p>
-We build high-quality web applications with modern technologies, scalable architecture, and beautiful user interfaces. Our solutions are optimized for speed, security, and cloud deployment.
+We design modern, scalable and responsive websites that look professional on every device.
 </p>
 
 <p>
-Whether you're building a personal portfolio, business website, or enterprise application, this template provides a clean and professional starting point.
+Whether you're building a portfolio, company website or cloud application, this template gives you a clean starting point.
 </p>
 
 <a href="#" class="btn">Learn More</a>
@@ -413,9 +394,9 @@ Whether you're building a personal portfolio, business website, or enterprise ap
 
 <section class="cta">
 
-<h2>Ready to Launch Your Next Project?</h2>
+<h2>Ready to Build Something Great?</h2>
 
-<p>Start building today and create something extraordinary.</p>
+<p>Start your journey today with a modern and responsive website.</p>
 
 <a href="#" class="btn">Start Now</a>
 
@@ -423,7 +404,7 @@ Whether you're building a personal portfolio, business website, or enterprise ap
 
 <footer id="contact">
 
-<p>© 2026 MyWebsite. All Rights Reserved.</p>
+© 2026 MyWebsite. All Rights Reserved.
 
 </footer>
 
